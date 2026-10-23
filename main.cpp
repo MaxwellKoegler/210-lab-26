@@ -113,7 +113,6 @@ int main() {
         s.erase(si);
         end = chrono::high_resolution_clock::now();
         times[0][3][2] = chrono::duration_cast<chrono::nanoseconds>(end-start).count();
-        times[0][3][2]= times[0][3][2] = chrono::duration_cast<chrono::nanoseconds>(end-start).count();
         for(int i=0; i<4; i++){
             for(int j = 0; j < 3; j++) {
                 if(times[0][i][j] != -1) {
@@ -129,7 +128,7 @@ int main() {
     for (int i = 0; i < 4; i++) {
         cout << operations[i] << "        ";
         for (int j = 0; j < 3; j++) {
-            cout << times[0][i][j] / runs << "        ";
+            cout << times[1][i][j] / runs << "        ";
         }
         cout << endl;
     }
