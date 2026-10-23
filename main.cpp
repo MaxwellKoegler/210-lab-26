@@ -122,10 +122,8 @@ int main() {
             }
         }
     }
-    string operations[4] = { //outputting
-        "Reading", "Sorting", "Inserting", "Deleting"
-    };
-
+    cout << "Number of simulations: " << runs << endl;
+    string operations[4] = {"Read", "Sort", "Insert", "Delete"};
     cout << "Operation    Vector        List        Set" << endl;
 
     for (int i = 0; i < 4; i++) {
