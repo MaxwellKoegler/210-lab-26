@@ -1,4 +1,4 @@
-//Maxwell Koegler | COMSC 210 | lab 25
+//Maxwell Koegler | COMSC 210 | lab 26
 #include <iostream>
 #include <chrono>
 #include <fstream>
