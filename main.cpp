@@ -17,7 +17,7 @@ int main() {
     string code;
 
     const int runs = 15;
-    long times [2][4][3] = {};
+    long long times [2][4][3] = {};
             //  ^ this is for current run, and accumulated totals
 
     for(int r  = 0; r < runs; r++) {
@@ -131,7 +131,7 @@ int main() {
     for (int i = 0; i < 4; i++) {
         cout << operations[i] << "        ";
         for (int j = 0; j < 3; j++) {
-            cout << times[0][i][j] << "        ";
+            cout << times[0][i][j] / runs << "        ";
         }
         cout << endl;
     }
