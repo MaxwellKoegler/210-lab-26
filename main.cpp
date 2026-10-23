@@ -18,7 +18,8 @@ int main() {
 
     const int runs = 15;
     long long times [2][4][3] = {};
-            //  ^ this is for current run, and accumulated totals
+            //  ^ this is for current run, and accumulated totals (first layer for individual run times second for accumulations)
+            // second dim is operations, third containers
 
     for(int r  = 0; r < runs; r++) {
 
@@ -116,20 +117,20 @@ int main() {
         for(int i=0; i<4; i++){
             for(int j = 0; j < 3; j++) {
                 if(times[0][i][j] != -1) {
-                    times[1][i][j] += times[0][i][j];
+                    times[1][i][j] += times[0][i][j]; //accumulates run times for each of the cycles
                 }
             }
         }
-        
+
     }
-    cout << "Number of simulations: " << runs << endl;
+    cout << "Number of simulations: " << runs << endl; //lists how many times the testing cycle was ran
     string operations[4] = {"Read", "Sort", "Insert", "Delete"};
     cout << "Operation    Vector        List        Set" << endl;
 
     for (int i = 0; i < 4; i++) {
         cout << operations[i] << "        ";
         for (int j = 0; j < 3; j++) {
-            cout << times[1][i][j] / runs << "        ";
+            cout << times[1][i][j] / runs << "        "; //now averages the accumulated times over run count
         }
         cout << endl;
     }
