@@ -120,6 +120,7 @@ int main() {
                 }
             }
         }
+        
     }
     cout << "Number of simulations: " << runs << endl;
     string operations[4] = {"Read", "Sort", "Insert", "Delete"};
